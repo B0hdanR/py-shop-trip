@@ -22,7 +22,7 @@ class Shop:
         print("You have bought:")
         for product_name, amount in client_products.items():
             value = round(self.products[product_name] * amount, 2)
-            final_value = int(value) if value.is_integer() else value
+            final_value = int(value) if isinstance(value, float) and value.is_integer() else value
             print(f"{amount} {product_name}s for"
                   f" {round(final_value, 2)} dollars")
         print(f"Total cost is {round(total_cost, 2)} dollars")

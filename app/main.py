@@ -5,7 +5,7 @@ from app.shop import Shop
 
 
 def shop_trip() -> None:
-    config_path = os.path.join(os.getcwd(), "app" , "config.json")
+    config_path = os.path.join(os.getcwd(), "app", "config.json")
     with open(config_path) as file:
         info = json.load(file)
 
